@@ -1,0 +1,361 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #fff;
+}
+
+/* Navigation */
+nav {
+  background-color: #004080;
+}
+
+nav .edu_links {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav .edu_list {
+  display: flex;
+  align-items: center;
+}
+
+nav #logo_li {
+  margin-right: auto;
+}
+
+nav a .Logo {
+  display: flex;
+  justify-content: center;
+}
+
+nav .Logo {
+  height: 60px;
+  width: 200px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+nav .edu_anchar {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  padding: 1.3rem 1rem;
+  transition: background-color 150ms ease;
+  font-size: 1rem;
+}
+
+.edu_anchar:hover {
+  background-color: #2d80d3;
+}
+
+nav #login_btn {
+  background-color: #151e5b;
+}
+
+#menu_icon {
+  background: none;
+  border: none;
+  padding: 1rem;
+  margin-left: auto;
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+}
+
+#menu-button {
+  display: none;
+}
+
+#close_menu {
+  font-size: 26px;
+  cursor: pointer;
+  color: #fff;
+  background: none;
+  border: none;
+  padding: 1rem;
+}
+
+/* Sidebar */
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 1rem;
+  transition: right 300ms ease-in-out;
+}
+
+#sidebar.active {
+  right: 0;
+}
+
+#overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  display: none;
+}
+
+#overlay.active {
+  display: block;
+}
+
+#sidebar .edu_list {
+  width: 100%;
+}
+
+#sidebar .edu_anchar {
+  width: 100%;
+  color: black;
+  padding: 30px 30px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s;
+}
+
+#sidebar .edu_anchar:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  #menu-button {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 1rem;
+  }
+
+  #sidebar {
+    display: flex;
+  }
+}
+
+/* Upload Form */
+.upload-form {
+  width: 90%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fdfdfd;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: none;
+}
+
+.upload-form.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.upload-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.upload-form input[type="text"],
+.upload-form input[type="number"],
+.upload-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.upload-form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Library Layout */
+.library-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.library-wrapper #buy_book{
+  margin-top: 30px;
+}
+
+.book-section {
+  flex: 1 1 100%;
+}
+
+.book-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #004080;
+  padding-bottom: 1rem;
+}
+
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Replacing .book-card with .card */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.card {
+  background-color: white;
+  width: 12rem;
+  padding: 0.6rem;
+  border-radius: 0.75rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+.card img {
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+.card img:hover {
+  opacity: 0.9;
+}
+.card h2 {
+  color: #004080;
+  font-size: 1.2rem;
+}
+.card p {
+  color: #555;
+  font-size: 0.8rem;
+  padding: 5px 5px 0;
+}
+.card-mid {
+  height: 290px;
+}
+
+.card a {
+  display: inline-block;
+  background-color: #004080;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.card a:hover {
+  background-color: #002b5c;
+  transform: scale(1.05);
+}
+.card_b {
+  display: inline-block;
+  background-color: #004080;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 0.5rem;
+}
+.card_b:hover {
+  background-color: #002b5c;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .library-wrapper {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .book-section h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    gap: 1rem;
+  }
+  .card {
+    width: 9rem;
+    padding: 0.4rem;
+  }
+  .card img {
+    height: 7rem;
+  }
+  .card h2 {
+    font-size: 1.25rem;
+  }
+  .card p {
+    font-size: 0.75rem;
+    padding: 2px 2px 0;
+  }
+  .card-mid {
+    height: 180px;
+  }
+  .card a {
+    padding: 0.5rem 0.75rem;
+  }
+}
