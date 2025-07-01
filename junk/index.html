@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduCareer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="slider.css">
+</head>
+<body>
+    <nav class="navbar" >
+            <ul class="edu_links" id="sidebar">
+                <li id="close-button" onclick= hideSidebar()><i class="fa-solid fa-xmark" id="close_menu"></i></li>
+                <li class="edu_list"><a href="#colleges" class="edu_anchar">Colleges</a></li>
+                <li class="edu_list"><a href="#courses" class="edu_anchar">Courses</a></li>
+                <li class="edu_list"><a href="#exams" class="edu_anchar">Exams</a></li>
+                <li class="edu_list"><a href="#contact" class="edu_anchar">Contact</a></li>
+                <li class="edu_list"><a href="search.html" class="edu_anchar">Search</a></li>
+                <li class="edu_list"><a href="login.html" class="edu_anchar">Login/SignUp</a></li>
+            </ul>
+            <ul class="edu_links">
+                <li class="edu_list" id="logo_li"><a href="index.html"><img src="Images/EduCareer.png" alt="EduCareer Logo" class="Logo"></a></li>
+                <li class="hideOnMobile" class="edu_list" ><a href="#colleges" class="edu_anchar">Colleges</a></li>
+                <li class="hideOnMobile" class="edu_list" ><a href="#courses" class="edu_anchar">Courses</a></li>
+                <li class="hideOnMobile" class="edu_list" ><a href="#exams" class="edu_anchar">Exams</a></li>
+                <li class="hideOnMobile" class="edu_list" ><a href="#contact" class="edu_anchar">Contact</a></li>
+                <li class="hideOnMobile" class="edu_list"><a href="search.html" class="edu_anchar" id="search_btn">Search</a></li>
+                <li class="hideOnMobile" class="edu_list"><a href="login.html" class="edu_anchar" id="login_btn">Login</a></li>
+                <li id="menu-button" onclick= showSidebar()><i class="fa-solid fa-bars" id="menu_icon"></i></li>
+            </ul>
+        
+    </nav>
+    
+    <section class="slider-Container">
+        <div class="slider-Sec">
+            <div class="slider" id="sliderTrack">
+            <div class="slides">
+                <img src="Images/Brainware-university.jpg" alt="Slide 1" />
+                <div class="caption">
+                Brainware University - Kolkata, India
+                <a href="#">View Details</a>
+                </div>
+            </div>
+            <div class="slides">
+                <img src="Images/IIT Kanpur.jpg" alt="Slide 2" />
+                <div class="caption">
+                IIT Kanpur - Premier Tech Institute of India
+                <a href="#">Visit IIT Kanpur</a>
+                </div>
+            </div>
+            <div class="slides">
+                <img src="Images/madraj.jpg" alt="madraj"/>
+                <div class="caption">
+                Madras Institute of Technology - Chennai, India
+                <a href="#">MIT Details</a>
+                </div>
+            </div>
+            </div>
+            <div class="controls">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+            </div>
+        </div>  
+    </section>
+    <main>
+        <section class="contentSection" id="colleges">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Top Colleges</h2>
+                    <a id="viewMoreBtn" href="Pages/colleges.html">View More &#10095; &#10095;</a>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-mid">
+                        <img src="Images/brainware.jpg" alt="Brainware Logo">
+                        <h2>Brainware University</h2>
+                        <p>Engineering, BCA, MCA, Multimidea</p>
+                        </div>
+                        <button><a href="https://www.brainwareuniversity.ac.in/degree-programmes/">Visit Website</a></button>
+                    </div>
+                    <div class="card">
+                        <div class="card-mid">
+                        <img src="Images/brainware.jpg" alt="Brainware Logo">
+                        <h2>Brainware University</h2>
+                        <p>Engineering, BCA, MCA, Multimidea</p>
+                        </div>
+                        <button><a href="https://www.brainwareuniversity.ac.in/degree-programmes/">Visit Website</a></button>
+                    </div>
+                    <div class="card">
+                        <div class="card-mid">
+                        <img src="Images/brainware.jpg" alt="Brainware Logo">
+                        <h2>Brainware University</h2>
+                        <p>Engineering, BCA, MCA, Multimidea</p>
+                        </div>
+                        <button><a href="https://www.brainwareuniversity.ac.in/degree-programmes/">Visit Website</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="college-sec" id="colleges">
+            <div class="container">
+                <div class="section-header">
+                <h2 class="secTittle">Others Top Colleges in India</h2>
+                <a id="viewMoreBtn" href="Pages/colleges.html">View More &#10095; &#10095;</a>
+            </div>
+                <ul class="collegeList">
+                    <li>
+                        <a href="https://www.brainwareuniversity.ac.in/degree-programmes/" target="_blank" class="collegeLink">Brainware University</a>
+                    </li>
+                    <li>
+                        <a href="https://www.brainwareuniversity.ac.in/degree-programmes/" target="_blank" class="collegeLink">Brainware University</a>
+                    </li>
+                    <li>
+                        <a href="https://www.brainwareuniversity.ac.in/degree-programmes/" target="_blank" class="collegeLink">Brainware University</a>
+                    </li>
+                    <li>
+                        <a href="https://www.brainwareuniversity.ac.in/degree-programmes/" target="_blank" class="collegeLink">Brainware University</a>
+                    </li>
+                    <li>
+                        <a href="https://www.brainwareuniversity.ac.in/degree-programmes/" target="_blank" class="collegeLink">Brainware University</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="schools" class="school-section">
+            <div class="container">
+            <div class="section-header">
+                <h2>Top Schools</h2>
+                <a id="viewMoreBtn" href="Pages/schools.html">View More &#10095; &#10095;</a>
+            </div>
+            <div class="cards">
+            
+              <div class="card">
+                <div class="sch-mid">
+                <img src="Images/Greenwood.jpeg" alt="Greenwood High">
+                <h2>Greenwood High International School</h2>
+                </div>
+                <button><a href="https://www.greenwoodhigh.edu.in/" target="_blank">Visit Website</a></button>
+              </div>
+          
+              <div class="card">
+                <div class="sch-mid">
+                <img src="Images/dpsrkp_logo.jpeg" alt="Delhi Public School">
+                <h2>Delhi Public School, RK Puram</h2>
+                </div>
+                <button><a href="https://dpsrkp.net/" target="_blank">Visit Website</a></button>
+              </div>
+          
+              <div class="card">
+                <div class="sch-mid">
+                <img src="Images/school3.jpg" alt="La Martiniere">
+                <h2>La Martiniere for Boys, Kolkata</h2>
+                </div>
+                <button><a href="https://lamartiniereforboys.co.in/" target="_blank">Visit Website</a></button>
+              </div>
+          
+              <div class="card">
+                <div class="sch-mid">
+                <img src="Images/school4.jpg" alt="Local School">
+                <h2>Sunrise Public School</h2>
+                </div>
+                <button disabled style="cursor: not-allowed;">No Website</button>
+              </div>
+            </div>
+        </div>
+          </section>
+          
+        <section class="collegeSec" id="courses" >
+            <div class="container">
+            <div class="section-header">
+                <h2 >Courses</h2>
+                <a id="viewMoreBtn" href="Pages/courses.html">View More &#10095; &#10095;</a>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h2>Engineering & Technology</h2>
+                    <p>B,Tech in Computer Science & Engineering</p>
+                    <button><a href="https://www.careers360.com/courses/btech-mtech-dual-degree">Explore</a></button>
+                </div>
+                <div class="card">
+                    <h2>Engineering & Technology</h2>
+                    <p>B,Tech in Computer Science & Engineering</p>
+                    <button><a href="https://www.careers360.com/courses/btech-mtech-dual-degree">Explore</a></button>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="exams" class="collegeSec">
+            <div class="container">
+            <div class="section-header">
+                <h2>Exams</h2>
+                <a id="viewMoreBtn" href="Pages/exams.html">View More &#10095; &#10095;</a>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h3>JEE Advanced</h3>
+                    <button><a href="https://jeeadv.ac.in/" target='_blank'>Read More</a></button>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="exm" class="exm-sec">
+            <div class="list-exm">
+                <div class="t-exm">
+                <!-- <div class="section-header"> -->
+                    <h2 class="tittle-ex">Top Exams this month</h2>
+                    <!-- <a id="viewMoreBtn">View More &#10095; &#10095;</a> -->
+                <!-- </div> -->
+                <div class="contentSec">
+                    <ul class="taglist">
+                        <li><a class="exms" href="/exams/tnpsc-group-4-exam">TNPSC Group 4</a></li>
+                        <li><a class="exms" href="/science/cuet-exam">CUET</a></li>
+                        <li><a class="exms" href="/engineering/jee-main-exam">JEE Main</a></li>
+                        <li><a class="exms" href="/medicine-health-sciences/neet-exam">NEET</a></li>
+                        <li><a class="exms" href="/mba/cat-exam">CAT</a></li>
+                        <li><a class="exms" href="/accounting-commerce/ca-intermediate-exam">CA Intermediate</a></li>
+                        <li><a class="exms" href="/science/cuet-pg-exam/ma-4367">CUET-PG</a></li>
+                        <li><a class="exms" href="/banking-finance-insurance/cfa-exam">CFA Exam</a></li>
+                        <li><a class="exms" href="/college/sha-shib-group-of-institutions/ssat-exam">SSAT</a></li>
+                        <li><a class="exms" href="/exams/ssc-mts-exam">SSC MTS</a></li>
+                        <li><a class="exms" href="/medicine-health-sciences/neet-pg-exam">NEET PG</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="book-suggestions">
+            <div class="container">
+            <div class="section-header">
+                <h2>Exam Book Suggestions</h2>
+                <a id="viewMoreBtn" href="Pages/books.html">View More &#10095; &#10095;</a>
+            </div>
+            <div class="book-container">
+              <div class="book-grid">
+                <div class="book-card">
+                  <img src="Images/shopping.webp" alt="Book 1 Cover">
+                  <h3>Quantitative Aptitude for CAT</h3>
+                  <button><a href="https://amzn.in/d/5KbI9Fb" class="book-link" target="_blank">View Details</a></button>
+                </div>
+                <div class="book-card">
+                  <img src="Images/shopping (1).webp" alt="Book 2 Cover">
+                  <h3>NEET Biology Mastery</h3>
+                  <button><a href="https://amzn.in/d/eKiA2o1" class="book-link" target="_blank">View Details</a></button>
+                </div>
+                <div class="book-card">
+                  <img src="book3.jpg" alt="Book 3 Cover">
+                  <h3>CUET Complete Prep</h3>
+                  <button><a href="#" class="book-link">View Details</a></button>
+                </div>
+                <!-- Add more book cards as needed -->
+              </div>
+            </div>
+            </div>
+          </section>
+          
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About EduCarrer</h2>
+            <p>At EduCarrer, we believe in empowering individuals with the skills needed to thrive in today's fast-paced digital world.</p>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" onclick="submit()" id="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 EduCarrer. All rights reserved.</p>
+</footer>
+    </main>
+
+    <script src="slider.js"></script>
+    <script src="https://kit.fontawesome.com/706f1c7ef6.js" crossorigin="anonymous"></script>
+    <script>
+       function showSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.add('active');
+}
+
+function hideSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.remove('active');
+}
+
+    </script>
+</body>
+</html>

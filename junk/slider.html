@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Slider with Info</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      height: 100vh;
+      padding-top: 20px;
+    }
+    .slider-Sec {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .slider {
+      display: flex;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slides {
+      min-width: 100%;
+      position: relative;
+    }
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .caption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      text-align: center;
+      box-sizing: border-box;
+      border-radius: 0 0 10px 10px;
+    }
+    .caption a {
+      padding-left: 10px;
+      color: #00ffff;
+      text-decoration: underline;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+    .caption a:hover {
+      color: #6aff00;
+      text-decoration: none;
+    }
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 10px;
+    }
+    .controls button {
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .controls button:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-Sec">
+    <div class="slider" id="sliderTrack">
+      <div class="slides">
+        <img src="Images/Brainware-university.jpg" alt="Slide 1" />
+        <div class="caption">
+          Brainware University - Kolkata, India
+          <a href="#">View Details</a>
+        </div>
+      </div>
+      <div class="slides">
+        <img src="Images/IIT Kanpur.jpg" alt="Slide 2" />
+        <div class="caption">
+          IIT Kanpur - Premier Tech Institute of India
+          <a href="#">Visit IIT Kanpur</a>
+        </div>
+      </div>
+      <div class="slides">
+        <img src="Images/madraj.jpg" alt="madraj"/>
+        <div class="caption">
+          Madras Institute of Technology - Chennai, India
+          <a href="#">MIT Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- <script src="slider.js"></script> -->
+  <script>
+  const slider = document.getElementById("sliderTrack");
+    const slides = document.querySelectorAll(".slides");
+    let slideIndex = 0;
+    let intervelId = null;
+
+    document.addEventListener("DOMContentLoaded", initializeSlider);
+
+    function initializeSlider() {
+      if (slides.length > 0) {
+        intervelId = setInterval(nextSlide, 4000);
+      }
+
+      document.getElementById("next").addEventListener("click", () => {
+        clearInterval(intervelId);
+        nextSlide();
+        intervelId = setInterval(nextSlide, 4000);
+      });
+
+      document.getElementById("prev").addEventListener("click", () => {
+        clearInterval(intervelId);
+        prevSlide();
+        intervelId = setInterval(nextSlide, 4000);
+      });
+
+      // Swipe support
+      let startX = 0;
+      let endX = 0;
+
+      slider.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+      });
+
+      slider.addEventListener("touchend", (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+      });
+
+      function handleSwipe() {
+        const diff = startX - endX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) nextSlide();
+          else prevSlide();
+        }
+      }
+    }
+
+    function showSlide(index) {
+      if (index >= slides.length) {
+        slideIndex = 0;
+      } else if (index < 0) {
+        slideIndex = slides.length - 1;
+      } else {
+        slideIndex = index;
+      }
+
+      slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+
+    function prevSlide() {
+      slideIndex--;
+      showSlide(slideIndex);
+    }
+
+    function nextSlide() {
+      slideIndex++;
+      showSlide(slideIndex);
+    }
+    </script>
+</body>
+</html>
